@@ -33,10 +33,8 @@ public class VeiculoService {
 					.map(veiculo -> new VeiculoResponseDtoBuilder(veiculo).calculaCombustivelGasto(veiculoParametro)
 							.calculaValorTotal(veiculoParametro).build())
 					.sorted(Comparator.comparingDouble(dto -> dto.getValorGastoCombustivel().doubleValue())).toList();
-
 			return retorno;
 		}
-
 		var listaVazia = new LinkedList<VeiculoResponseDto>();
 		return listaVazia;
 

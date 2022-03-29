@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+
+  exemploApi:
+    build:
+      context: .
+    image: sidneitwardowski/exemplo-api:latest
+    restart: always
+    ports:
+      - "8080:8080"
+    
+

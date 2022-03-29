@@ -15,7 +15,7 @@
 	<name>ExemploApiRest</name>
 	<description>Exemplo básico de uma Api Rest</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>16</java.version>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		
 		

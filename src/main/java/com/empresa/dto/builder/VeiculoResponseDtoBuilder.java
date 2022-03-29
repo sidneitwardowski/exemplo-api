@@ -33,7 +33,6 @@ public class VeiculoResponseDtoBuilder {
 		BigDecimal totalValorRodovia = totalGastoEmLitros(veiculoPesquisado.getTotalkmRodovia(), mediaRodovia)
 				.multiply(veiculoPesquisado.getPrecoGasolina());
 		this.instance.setValorGastoCombustivel(totalValorCidade.add(totalValorRodovia).setScale(2, RoundingMode.UP));
-
 		return this;
 	}
 
