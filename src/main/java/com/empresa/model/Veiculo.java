@@ -23,7 +23,7 @@ public class Veiculo implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	@NotEmpty(message = "Mome não pode ser vazio")
+	@NotEmpty(message = "Nome não pode ser vazio")
 	@Column(name = "nome")
 	private String nome;
 	@NotEmpty(message = "Marca não pode ser vazio")

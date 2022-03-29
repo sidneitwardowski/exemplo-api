@@ -17,6 +17,8 @@
 	<properties>
 		<java.version>11</java.version>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		
+		
 	</properties>
 	<dependencies>
 		<dependency>

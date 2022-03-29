@@ -1,11 +1,20 @@
-package com.empresa.dto;
+package com.empresa.repository.filtro;
 
 import java.math.BigDecimal;
 
-public class VeiculoParametro {
+public class CalculoMediaVeiculoFilter {
 	public BigDecimal precoGasolina;
 	public BigDecimal totalKmCidade;
 	public BigDecimal totalkmRodovia;
+
+	public CalculoMediaVeiculoFilter(BigDecimal precoGasolina, BigDecimal totalKmCidade, BigDecimal totalkmRodovia) {
+		this.precoGasolina = precoGasolina;
+		this.totalKmCidade = totalKmCidade;
+		this.totalkmRodovia = totalkmRodovia;
+	}
+
+	public CalculoMediaVeiculoFilter() {
+	}
 
 	public BigDecimal getPrecoGasolina() {
 		return precoGasolina;

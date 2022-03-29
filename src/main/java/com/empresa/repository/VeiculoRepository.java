@@ -1,9 +1,11 @@
 package com.empresa.repository;
 
-import com.empresa.model.Veiculo;
-
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface VeiculoRepository extends JpaRepository<Veiculo, Integer>{
-    
+import com.empresa.model.Veiculo;
+
+public interface VeiculoRepository extends JpaRepository<Veiculo, Integer> {
+
+	public Veiculo findByNome(String nome);
+
 }

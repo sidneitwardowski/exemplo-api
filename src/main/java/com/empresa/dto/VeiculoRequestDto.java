@@ -26,7 +26,6 @@ public class VeiculoRequestDto {
 	private BigDecimal consumoMedioCidade;
 	@NotNull(message = "O consumo médio na rodovia não deve ser nulo")
 	@DecimalMin(value = "0.1", inclusive = false)
-
 	private BigDecimal consumoMedioRodovia;
 
 	public VeiculoRequestDto(Veiculo veiculo) {

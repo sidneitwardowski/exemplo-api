@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.empresa.dto.VeiculoParametro;
 import com.empresa.dto.VeiculoRequestDto;
 import com.empresa.model.Veiculo;
 import com.empresa.repository.VeiculoRepository;
+import com.empresa.repository.filtro.CalculoMediaVeiculoFilter;
 import com.empresa.service.VeiculoService;
 
 import io.swagger.v3.oas.annotations.Operation;
@@ -40,7 +40,7 @@ public class VeiculoResource {
 
 	@Operation(summary = "Ranking de veículos que menos gastaram")
 	@GetMapping("/ranking-consumo")
-	public ResponseEntity<?> rankingVeiculos(VeiculoParametro dadosVeiculo) {
+	public ResponseEntity<?> rankingVeiculos(CalculoMediaVeiculoFilter dadosVeiculo) {
 		veiculoService.validaFiltro(dadosVeiculo);
 		return veiculoRepository.count() > 0 ? ResponseEntity.ok(veiculoService.rankingDeVeiculos(dadosVeiculo))
 				: ResponseEntity.noContent().build();
